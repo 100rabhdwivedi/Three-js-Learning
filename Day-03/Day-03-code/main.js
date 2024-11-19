@@ -20,9 +20,7 @@ scene.add(ambientLight);
 const textureLoader = new THREE.TextureLoader();
 let text = textureLoader.load('./red_brick.webp');
 text.colorSpace =  THREE.SRGBColorSpace;
-text.wrapS = THREE.RepeatWrapping;
-text.wrapT = THREE.RepeatWrapping;
-text.repeat.set(8,8);
+
 
 
 const geometry = new THREE.PlaneGeometry(5,5,20,20)
@@ -62,7 +60,7 @@ first_task(); */
 
 //second task Create a sphere geometry and apply a moon surface texture on it.
 
-/*function second_task(){
+function second_task(){
   
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.1,1000);
@@ -105,7 +103,7 @@ const clock = new THREE.Clock();
 
 function animate(){
   window.requestAnimationFrame(animate);
-  box.rotation.y = clock.getElapsedTime() *0.5;
+  box.rotation.y = clock.getElapsedTime() *0.2;
   controls.update();
 
   renderer.render(scene,camera);
@@ -114,5 +112,5 @@ function animate(){
 animate();
 }
 
-second_task(); */
+second_task(); 
 
