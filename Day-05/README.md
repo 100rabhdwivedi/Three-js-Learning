@@ -69,7 +69,7 @@ window.addEventListener('click', (event) => {
 });
 
 
-## Output Preview
+ Output Preview
 A realistic 3D room with:
 Interactive 3D models.
 Dynamic lighting effects.

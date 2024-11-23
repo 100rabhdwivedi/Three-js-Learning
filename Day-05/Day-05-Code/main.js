@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import {  TextureLoader } from 'three/webgpu';
+import {  cameraProjectionMatrix, TextureLoader } from 'three/webgpu';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 
@@ -60,7 +60,18 @@ loader4.load('./light.glb',(gltf)=>{
     model4.rotation.y = Math.PI / 2;
     scene.add(model4);   
 })
+var model5;
 
+const loader5= new GLTFLoader();
+
+loader5.load('./remote.glb',(gltf)=>{
+    model5 = gltf.scene;
+    model5.scale.set(0.5, 0.5, 0.5);
+    model5.position.z = -7.8;
+    model5.position.y = -2;
+    model5.position.x = 4;
+    scene.add(model5);   
+})
 
 const textureLoader = new TextureLoader();
 const textfloor = textureLoader.load('./floor.jpg');
@@ -153,7 +164,7 @@ window.addEventListener('click', (event) => {
   
     raycaster.setFromCamera(mouse, camera);
   
-    const intersects = raycaster.intersectObject(tv);
+    const intersects = raycaster.intersectObject(model5);
   
     if (intersects.length > 0) {
         if (isPlaying) {
@@ -175,11 +186,36 @@ window.addEventListener('mousemove',(e)=>{
 })
 
 
+
+
 camera.position.z = 12;
 
 const canvas = document.querySelector("canvas");
 const renderer = new THREE.WebGLRenderer({canvas,antialias:true});
 renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+function responsive(){
+    let width = window.innerWidth;
+
+    if(width > 1024){
+        camera.fov = 75;
+    }
+    else if(width >768){
+        camera.fov = 85;
+    }
+    else{
+        camera.fov = 110;
+    }
+
+    camera.aspect = width / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width,window.innerHeight);
+}
+
+window.addEventListener("resize",responsive);
+responsive();
+
 
 
 const controls = new OrbitControls( camera, renderer.domElement );
