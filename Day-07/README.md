@@ -126,7 +126,7 @@ This project showcases a spooky, interactive 3D Haunted House scene using **Thre
 
 ### Screenshot of the Haunted House Scene:
 
-![Haunted House](./output/image.png.)
+![Haunted House](./output/image.png)
 
 > A spooky haunted house scene with interactive lighting, fog, and ghost animations. 🎃👻
 
