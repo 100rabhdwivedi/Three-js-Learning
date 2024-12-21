@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <nav class="fixed nav top-0 navbar cursor-pointer h-20 w-full flex items-center justify-between px-6 md:px-12 lg:px-16 pb-4 text-white border-b-2 border-[#bfc0c0] border-opacity-50 bg-[rgba(0,0,0,0.5)] z-10">
+    <div class="left font-semibold text-lg md:text-xl">
+      <h1>space<span class="text-[#219ebc]">edu</span></h1>
+    </div>
+    <div class="right hidden md:flex gap-4 lg:gap-12 capitalize items-center">
+      <h2 class="text-sm md:text-base">planets</h2>
+      <h2 class="text-sm md:text-base">trailer</h2>
+      <h2 class="text-sm md:text-base">tickets</h2>
+      <h2 class="text-sm md:text-base">blog</h2>
+      <button class="px-6 py-2 bg-[#fff] rounded-full text-black font-semibold text-sm md:text-base">Enroll</button>
+    </div>
+    <div class="md:hidden">
+      <i class="ri-menu-line text-2xl"></i>
+    </div>
+  </nav>
+
+  <canvas id="canvas" class=""></canvas>
+
+  <div class="section1 h-screen w-full flex flex-col items-center gap-4 py-8 text-white mt-28">
+    <h2 class="tracking-wide text-xl md:text-2xl">PLANET</h2>
+    <h1 class="text-[8vw] md:text-[7vw]">EARTH</h1>
+    <p class="w-[90%] md:w-[60%] text-center text-sm md:text-base">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus facilis doloribus, consequuntur quod voluptas odit sapiente ea corrupti vitae asperiores!
+    </p>
+    <button class="mt-8 px-4 py-2 bg-white rounded-full uppercase text-black font-semibold text-sm md:text-base">Get Started</button>
+  </div>
+
+  <div class="section2 h-screen w-full flex flex-col md:flex-row px-6 md:px-20">
+    <div class="left h-full w-full md:w-1/2 flex flex-col justify-center">
+      <h2 class="text-lg md:text-xl uppercase">The Blue Planet</h2>
+      <h1 class="uppercase text-[8vw] md:text-[7vw]">Earth</h1>
+      <span class="w-20 h-1 bg-[#219ebc] mt-4 md:mt-8"></span>
+      <p class="text-sm md:text-base mt-4 md:mt-6 w-[95%] md:w-[80%]">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus, quis hic. Assumenda veniam placeat iste, distinctio numquam rem vero, inventore adipisci non odit quia facere earum dignissimos optio at illo.
+      </p>
+      <div class="flex gap-4 mt-8 md:mt-16 text-black">
+        <button class="px-4 md:px-6 py-1 uppercase font-bold text-xs md:text-sm bg-white rounded-full">Learn More</button>
+        <div class="h-10 md:h-12 w-10 md:w-12 rounded-full bg-white flex items-center justify-center text-lg">
+          <i class="ri-play-fill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section3 h-screen w-full relative z-0 px-6 md:px-20">
+    <div class="absolute right-6 md:right-[10%] bottom-16 md:bottom-[12%] w-full md:w-1/3">
+      <div class="h-1 w-20 bg-[#219ebc] absolute right-0"></div>
+      <p class="text-sm text-right mt-4 md:mt-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, ab architecto odit commodi quas vel minima aliquam beatae at placeat nobis minus porro praesentium adipisci iste quis velit fugit magni.
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; Prevent scrolling */
+}
+
+body{
+    /* background-color: black; */
+    background-image: url(/textures/stars.jpg);
+    color: white    ;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind other content */
+}
+
+
+.section1, .section2, .section3 {
+    position: relative;
+    z-index: 1; /* Above the canvas */
+}
+nav{
+    z-index: 99;
+}
+
+
+
