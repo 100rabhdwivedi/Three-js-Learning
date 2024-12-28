@@ -107,7 +107,7 @@ tl.to(model.position, {
 
 ## Live Demo
 
-Check out the live demo of the project [here](#jbl-three.vercel.app).
+Check out the live demo of the project [here](jbl-three.vercel.app).
 
 
 
