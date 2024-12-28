@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Neue";
+  src: url('../assist/font/NeueMontreal-Regular.ttf');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: #dddddd;
+  color: black;
+  font-family: Neue;
+}
+.nav-child{
+  flex: 1; 
+  text-align: center; 
+}
+.canvas-container{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+#canvas{
+  height: 100%;
+  width: 100%;
+}
+
